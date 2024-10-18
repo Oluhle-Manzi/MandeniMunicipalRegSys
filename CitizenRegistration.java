@@ -15,7 +15,7 @@ public class CitizenRegistration {
             System.out.print("Enter citizen's ID (13 characters): ");
             citizenID = scanner.nextLine();
             
-            // Validate if ID is the correct length (13 characters)
+           
             if (citizenID.length() != 13) {
                 throw new IllegalArgumentException("Invalid Citizen ID: Must be 13 characters long.");
             }
@@ -23,13 +23,13 @@ public class CitizenRegistration {
             System.out.println("Citizen successfully registered: " + citizenName);
             
         } catch (IllegalArgumentException e) {
-            // Handle specific invalid ID format
+            
             System.out.println("Error: " + e.getMessage());
         } catch (Exception e) {
-            // Handle unexpected errors
+           
             System.out.println("An unexpected error occurred: " + e.getMessage());
         } finally {
-            // Always close scanner resource
+            
             scanner.close();
         }
     }
